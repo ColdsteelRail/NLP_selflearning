@@ -11,7 +11,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <F3> :NERDTreeToggle <CR> " 打开目录树
-noremap <F4> :Autoformat<CR> " 按F4代码格式化
+noremap <F4> :Autoformat<CR>:w<CR> " 代码格式化并且保存
 
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify' " vim初始页面
@@ -21,12 +21,13 @@ Plug 'itchyny/vim-cursorword' " 光标所在单词下划线
 Plug 'lfv89/vim-interestingwords' " 选中的单词高亮
 Plug 'scrooloose/nerdtree'        " 目录树
 Plug 'jiangmiao/auto-pairs'       " 括号自动匹配
+Plug 'justmao945/vim-clang'       " cpp/c自动补齐
+Plug 'ervandew/supertab'          " 函数变量自动补齐
 call plug#end()
 
 
 "定义CompileRun函数，用来调用进行编译和运行
 map <F5> :call CompileRun()<CR>
-map <C-F5> :call Debug()<CR>
 " 编译函数
 func! CompileRun()
     exec "w"
@@ -36,16 +37,5 @@ func! CompileRun()
     elseif &filetype == "cpp"
         exec "!g++ % -o %<"
         exec "!./%<"
-    endif
-endfunc
-" 调试函数
-func! Debug()
-    exec "w"
-    if &filetype == "c"
-        exec "!gcc % -o %< -gstabs+"
-        exec "!gdb %<"
-    elseif &filetype == "cpp"
-        exec "!g++ % -o %< -gstabs+"
-        exec "!gdb %<"
     endif
 endfunc
