@@ -20,6 +20,7 @@ Plug 'Chiel92/vim-autoformat' " 代码格式化
 Plug 'itchyny/vim-cursorword' " 光标所在单词下划线
 Plug 'lfv89/vim-interestingwords' " 选中的单词高亮
 Plug 'scrooloose/nerdtree'        " 目录树
+Plug 'jiangmiao/auto-pairs'       " 括号自动匹配
 call plug#end()
 
 
