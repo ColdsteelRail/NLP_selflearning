@@ -12,7 +12,9 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <F3> :NERDTreeToggle <CR> " 打开目录树
 noremap <F4> :Autoformat<CR>:w<CR> " 代码格式化并且保存
+noremap <F2> :TlistOpen<CR>  "打开函数列表
 
+"插件管理
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify' " vim初始页面
 Plug 'dense-analysis/ale' " 错误提示
@@ -23,8 +25,12 @@ Plug 'scrooloose/nerdtree'        " 目录树
 Plug 'jiangmiao/auto-pairs'       " 括号自动匹配
 Plug 'justmao945/vim-clang'       " cpp/c自动补齐
 Plug 'ervandew/supertab'          " 函数变量自动补齐
+Plug 'vim-scripts/taglist.vim'    " 显示函数变量列表
 call plug#end()
 
+"taglist设置
+let Tlist_Use_Right_Window=1
+let Tlist_Exit_OnlyWindow=1
 
 "定义CompileRun函数，用来调用进行编译和运行
 map <F5> :call CompileRun()<CR>
