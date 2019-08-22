@@ -5,6 +5,9 @@ set softtabstop=4 " 表示在编辑模式的时候按退格键的时候退回缩
 set shiftwidth=4  " 表示每一级缩进的长度，一般设置成跟 softtabstop 一样
 set expandtab     " 表示缩进用空格来表示，noexpandtab 则是用制表符表示一个缩进
 set autoindent    " 自动缩进
+syntax enable
+set background=dark
+set nocompatible
 " 窗口的切换
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -27,7 +30,6 @@ Plug 'justmao945/vim-clang'       " cpp/c自动补齐
 Plug 'ervandew/supertab'          " 函数变量自动补齐
 Plug 'vim-scripts/taglist.vim'    " 显示函数变量列表
 call plug#end()
-
 "taglist设置
 let Tlist_Use_Right_Window=1
 let Tlist_Exit_OnlyWindow=1
@@ -45,3 +47,4 @@ func! CompileRun()
         exec "!./%<"
     endif
 endfunc
+
