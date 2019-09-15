@@ -1,5 +1,6 @@
 # [Word2Vec] Efficient Estimation of Word Representations in Vector Space (Google 2013)
 ---
+论文来自https://github.com/wzhe06/Reco-papers/blob/master/Embedding/
 # 1. Introuduction
 - =.=！略
 
@@ -16,4 +17,3 @@
 ### Continuous Bag-of-Words Model
 $Q = N × D + D × \log_2^V$
 ### Continuous Skip-gram Model
-
