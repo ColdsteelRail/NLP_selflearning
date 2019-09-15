@@ -13,7 +13,7 @@
     3. $Q$ is defined further for each model architecture
 
 # 3. New Log-Linear Models(Two)
-**Purpose**:  learning distributed representations of words that try to minimize computational complexity
+**Purpose**:  learning **distributed representations of words** that try to minimize computational complexity
 ### Continuous Bag-of-Words Model (CBOW)
 - Function: predicting the current word based on the context
 - Complexity: $ Q = N × D + D × \log_2^V $
