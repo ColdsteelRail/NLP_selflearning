@@ -100,9 +100,9 @@ def get_label(txt_dir):
     return labels_train
         
 if __name__ == '__main__':
-    train_dir = 'C:\\Users\\HEEEEE\\Desktop\\data(1)\\train'
-    test_dir = 'C:\\Users\\HEEEEE\\Desktop\\data(1)\\test'
-    stopwords_dir = 'C:\\Users\\HEEEEE\\Desktop\\data(1)\\stopwords\\哈工大停用词表.txt'
+    train_dir = 'E:\\Mywindows\\NLP\\1701_实验\\data(1)\\train'
+    test_dir = 'E:\\Mywindows\\NLP\\1701_实验\\data(1)\\test'
+    stopwords_dir = 'E:\\Mywindows\\NLP\\1701_实验\\data(1)\\stopwords\\哈工大停用词表.txt'
     #分词
     split_content(train_dir)
     split_content(test_dir)
